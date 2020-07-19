@@ -19,11 +19,11 @@ user2 = User.create(name: "Jonas", username: "sandyman768", age:19, location: "B
 user3 = User.create(name: "Hellen", username: "seadwell111", age:18, location: "Sandiego, California", password: "agility371", email:"uyt@hotmail.com", phone:9912371241)
 user4 = User.create(name: "Felix", username: "tidal6879", age:21, location: "Chicago, Illinois", password: "rockyshores14", email:"dreamer@yahoo.com", phone:12300986798)
 
-beach1 = Beachslot.create(name: "Copacabana", location: "Rio de Janeiro", picture:"https://lh6.googleusercontent.com/proxy/X6cR5pH-PZ1TmMRDFR9aAfR8gIlu434_crxA8y3Koyw9yItiyFy9EMzOCdxHrwmrqpve9tIhU00awY6ZKlcZiK5ln7nAaN2hCuaoN_aVI9YQjnMZJPfUsCkomqujUXJkyurBTD_i9Eb8t-fgDUJIcyFsX-1QCjtCudNmp5rVzg=w1440-h821")
-beach2 = Beachslot.create(name: "Santa Monica Beach", location: "California", picture:"https://lh5.googleusercontent.com/proxy/tf5hCr2x2A9VG8UVP-4SolSpG28jAqrfDSCqq7GgJP-SOqd4AVNjXCn7H7dWDbjdUBXXELe5UcvW0BIt7afclMpk5WfMKDNckY_PkxBGQptw8L8UcBHKMaj9vVVVib4eR1LVtZwxhcyGzIqoC5WTYDXc7Avv0DpS0pf5tg4pcDtz7wlrUH-WiLYjqJj5TiIni5da-y2Q5iYT5F-KwzS1kfhMoA76POfXyrWUbW_A3qNqZ6_tmQ=w1440-h821")
-beach3 = Beachslot.create(name: "South Beach", location: "Miami",  picture:"https://lh3.googleusercontent.com/proxy/7LCDAS253KqnDxsQl_cCcdwApxYVSnukn7U0FUxCJvlgy2YjHgy-k2EAsWfK27vCOWbZYuAwMGaYNRYKqWDhoSAkR8h--U7g7JViFiyXpXfd7xtGKGBxog=w1440-h821")
-beach4 = Beachslot.create(name: "Renaissance Island", location: "Aruba", picture:"https://lh6.googleusercontent.com/proxy/X6cR5pH-PZ1TmMRDFR9aAfR8gIlu434_crxA8y3Koyw9yItiyFy9EMzOCdxHrwmrqpve9tIhU00awY6ZKlcZiK5ln7nAaN2hCuaoN_aVI9YQjnMZJPfUsCkomqujUXJkyurBTD_i9Eb8t-fgDUJIcyFsX-1QCjtCudNmp5rVzg=w1440-h821")
-beach5 = Beachslot.create(name: "Waikiki", location: "Honolulu, Hawaii", picture:"https://cache.marriott.com/marriottassets/marriott/HNLMC/hnlmc-views-0153-hor-feat.jpg?output-quality=70&interpolation=progressive-bilinear&downsize=1180px:*")
+beach1 = Beachslot.create(name: "Copacabana", location: "Rio de Janeiro", picture:"https://tse4.mm.bing.net/th?id=OIP.rnLS0CZDXuE-HExyNTemTQHaEo&pid=Api")
+beach2 = Beachslot.create(name: "Santa Monica Beach", location: "California", picture:"https://media.timeout.com/images/105395976/image.jpg")
+beach3 = Beachslot.create(name: "South Beach", location: "Miami",  picture:"https://tse2.mm.bing.net/th?id=OIP.br78Ex5oA8y1WmiOYU3YLAHaEo&pid=Api")
+beach4 = Beachslot.create(name: "Renaissance Island", location: "Aruba", picture:"https://tse3.mm.bing.net/th?id=OIP.znCUq7_9i4UxOD5WMdLpYQHaCn&pid=Api")
+beach5 = Beachslot.create(name: "Waikiki", location: "Honolulu, Hawaii", picture:"https://tse4.mm.bing.net/th?id=OIP.8-2J1sT2dBKf2G40qbtGHgHaFj&pid=Api")
 beach6 = Beachslot.create(name: "Navagio Beach", location: "Zackynthos, Greece", picture:"https://d36tnp772eyphs.cloudfront.net/blogs/1/2018/04/shutterstock_526861243.jpg")
 beach7 = Beachslot.create(name: "Whitehaven Beach", location: "Whitsunday, Australia", picture:"https://tse4.mm.bing.net/th?id=OIP.0t9EHjHjdOc29dbt9jvFAAHaEK&pid=Api")
 beach8 = Beachslot.create(name: "Psarou Beach", location: "Mykonos, Greece",  picture:"https://media.cntraveler.com/photos/5c66d368916f6e09a1f1c8ad/master/w_820,c_limit/psarou-beach-on-mykonos_GettyImages-1041955678.jpg")
@@ -38,8 +38,21 @@ beach16 = Beachslot.create(name: "Rhossili Bay", location: "Wales",  picture:"ht
 
 random_comment = ["this beach is very natural", "this beach is dirty", "I hate this beach.", "Poor animals and inhabitants"]
 
+beach_length = Beachslot.all.length 
+
+user_length = User.all.length
+
 def createBeachReviews
-    User.all.map{|user| (Beach.all.length - 4).times Beachreview.create(beachslot_id: rand(0..Beach.all.length), user_id: user.id, airpollution: rand(0..5), noisepollution: rand(0..5), waterpollution: rand(0..5), plasticpollution: rand(0..5), comment:random_comment[rand(0..random_comment.length)], upvote: rand(0..User.all.length))}
+    User.all.map do |user| 
+        (beach_length - 4).times 
+        Beachreview.create!(beachslot_id: rand(0..beach_length), 
+        user_id: user.id, airpollution: rand(0..5), 
+        noisepollution: rand(0..5), 
+        waterpollution: rand(0..5), 
+        plasticpollution: rand(0..5), 
+        comment:random_comment[rand(0..random_comment.length)], 
+        upvote: rand((0-user_length)..user_length))
+    end
 end
 
 
