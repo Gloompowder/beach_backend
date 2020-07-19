@@ -1,8 +1,10 @@
-# README
+# Major League Hacking Project (MLH) 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# How it works
 
+# What this does 
+
+# Why do this?
 Things you may want to cover:
 
 * Ruby version
@@ -20,6 +22,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
-# beach_backend
