@@ -39,5 +39,16 @@ beach16 = Beachslot.create(name: "Rhossili Bay", location: "Wales",  picture:"ht
 random_comment = ["this beach is very natural", "this beach is dirty", "I hate this beach.", "Poor animals and inhabitants"]
 
 def createBeachReviews
-    User.all.map{|user| 12.times BeachReview.create(beachslot_id: rand(10..15), user_id: user.id, airpollution: rand(0..5), noisepollution: rand(0..5), waterpollution: rand(0..5), plasticpollution: rand(0..5), comment:random_comment[rand(0..3)], upvote: rand(0..User.all.length))}
+    User.all.map{|user| (Beach.all.length - 4).times Beachreview.create(beachslot_id: rand(0..Beach.all.length), user_id: user.id, airpollution: rand(0..5), noisepollution: rand(0..5), waterpollution: rand(0..5), plasticpollution: rand(0..5), comment:random_comment[rand(0..random_comment.length)], upvote: rand(0..User.all.length))}
 end
+
+
+# t.integer :beachslot_id
+# t.integer :user_id
+# t.integer :airpollution
+# t.integer :noisepollution
+# t.integer :waterpollution
+# t.integer :plasticpoollution
+# t.integer :foottraffick
+# t.string :comment
+# t.integer :upvote

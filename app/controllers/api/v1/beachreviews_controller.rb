@@ -1,16 +1,21 @@
 class Api::V1::BeachreviewsController < ApplicationController
+    def index 
+        @beachreviews = Beachreview.all 
+        render json: @beachreviews
+    end
+
     def create 
-        @beachreview = BeachReview.create(beachreview_params)
+        @beachreview = Beachreview.create(beachreview_params)
         render json: @beachreview
     end
 
     def update
-        @beachreview = BeachReview.find(params(:id))
+        @beachreview = Beachreview.find(params(:id))
         render json: @beachreview
     end
 
     def delete 
-        @beachreview = BeachReview.find(params(:id))
+        @beachreview = Beachreview.find(params(:id))
         @beachreview.destroy
         render json: @beachreview
     end
