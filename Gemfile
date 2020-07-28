@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'minitest'
 gem 'rake'
-gem 'rubocop', '0.36.0'
+gem 'rubocop', '0.48.1'
 gem 'simplecov'
 
 ruby '2.6.1'
