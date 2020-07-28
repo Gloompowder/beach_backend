@@ -8,6 +8,7 @@ class CreateBeachreviews < ActiveRecord::Migration[6.0]
       t.integer :waterpollution
       t.integer :plasticpollution
       t.integer :foottraffick
+      t.integer :lightpollution
       t.string :comment
       t.integer :upvote
       t.string :picture

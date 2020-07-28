@@ -4,6 +4,11 @@ class Api::V1::BeachreviewsController < ApplicationController
         render json: @beachreviews
     end
 
+    def show 
+        @beachreview = Beachreview.find(params(:id))
+        render json: @beachreview
+    end
+
     def create 
         @beachreview = Beachreview.create(beachreview_params)
         render json: @beachreview
@@ -23,6 +28,6 @@ class Api::V1::BeachreviewsController < ApplicationController
     private 
 
     def beachreview_params
-        params.require(:beachreview).permit(:name, :location, :averagescore, :airpollution, :noisepollution, :waterpollution, :plasticpollution, :picture, :foottraffick, :comment)
+        params.require(:beachreview).permit(:name, :beachslot_id, :location, :airpollution, :noisepollution, :lightpollution, :upvote, :waterpollution, :plasticpollution, :picture, :foottraffick, :comment)
     end
 end

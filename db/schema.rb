@@ -18,10 +18,12 @@ ActiveRecord::Schema.define(version: 2020_07_18_054528) do
     t.integer "airpollution"
     t.integer "noisepollution"
     t.integer "waterpollution"
-    t.integer "plasticpoollution"
+    t.integer "plasticpollution"
     t.integer "foottraffick"
+    t.integer "lightpollution"
     t.string "comment"
     t.integer "upvote"
+    t.string "picture"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

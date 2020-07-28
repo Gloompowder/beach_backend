@@ -36,25 +36,63 @@ beach14 = Beachslot.create(name: "Cala Goloritzè Beach", location: "Sardinia", 
 beach15 = Beachslot.create(name: "Tangalle Beach", location: "Sri Lanka", picture:"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/tangalle-beach-hammocks-royalty-free-image-812584318-1559069656.jpg?crop=1xw:1xh;center,top&resize=980:*")
 beach16 = Beachslot.create(name: "Rhossili Bay", location: "Wales",  picture:"https://hips.hearstapps.com/hbz.h-cdn.co/assets/16/17/1280x1919/rhossil-bay-beach-wales.jpg?resize=980:*")
 
-random_comment = ["this beach is very natural", "this beach is dirty", "I hate this beach.", "Poor animals and inhabitants"]
+# random_comment = ["this beach is very natural", "this beach is dirty", "I hate this beach.", "Poor animals and inhabitants"]
 
-beach_length = Beachslot.all.length 
+# beach_length = Beachslot.all.length 
 
-user_length = User.all.length
+# user_length = User.all.length
 
-def createBeachReviews
-    User.all.map do |user| 
-        (beach_length - 4).times 
-        Beachreview.create!(beachslot_id: rand(0..beach_length), 
-        user_id: user.id, airpollution: rand(0..5), 
-        noisepollution: rand(0..5), 
-        waterpollution: rand(0..5), 
-        plasticpollution: rand(0..5), 
-        comment:random_comment[rand(0..random_comment.length)], 
-        upvote: rand((0-user_length)..user_length))
-    end
-end
+# def createBeachReviews
+#     User.all.map do |user| 
+#         (beach_length - 4).times 
+#         Beachreview.create(beachslot_id: rand(0..beach_length), 
+#         user_id: user.id, airpollution: rand(0..5), 
+#         noisepollution: rand(0..5), 
+#         waterpollution: rand(0..5), 
+#         plasticpollution: rand(0..5), 
+#         comment:random_comment[rand(0..random_comment.length)], 
+#         upvote: rand((0-user_length)..user_length))
+#     end
+# end
 
+beachreview1 = Beachreview.create!(beachslot_id: beach1.id, user_id: user1.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview2 = Beachreview.create!(beachslot_id: beach2.id, user_id: user1.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview3 = Beachreview.create!(beachslot_id: beach3.id, user_id: user1.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview4 = Beachreview.create!(beachslot_id: beach4.id, user_id: user1.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview5 = Beachreview.create!(beachslot_id: beach5.id, user_id: user1.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview6 = Beachreview.create!(beachslot_id: beach6.id, user_id: user1.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview7 = Beachreview.create!(beachslot_id: beach7.id, user_id: user1.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview8 = Beachreview.create!(beachslot_id: beach8.id, user_id: user1.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview9 = Beachreview.create!(beachslot_id: beach9.id, user_id: user1.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview10 = Beachreview.create!(beachslot_id: beach10.id, user_id: user1.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview11 = Beachreview.create!(beachslot_id: beach11.id, user_id: user1.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview12 = Beachreview.create!(beachslot_id: beach12.id, user_id: user1.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview13 = Beachreview.create!(beachslot_id: beach13.id, user_id: user1.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview14 = Beachreview.create!(beachslot_id: beach14.id, user_id: user1.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview15 = Beachreview.create!(beachslot_id: beach15.id, user_id: user1.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview16 = Beachreview.create!(beachslot_id: beach16.id, user_id: user1.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview17 = Beachreview.create!(beachslot_id: beach1.id, user_id: user2.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview18 = Beachreview.create!(beachslot_id: beach2.id, user_id: user2.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview19 = Beachreview.create!(beachslot_id: beach3.id, user_id: user2.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview20 = Beachreview.create!(beachslot_id: beach4.id, user_id: user2.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview21 = Beachreview.create!(beachslot_id: beach5.id, user_id: user2.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview22 = Beachreview.create!(beachslot_id: beach6.id, user_id: user2.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview23 = Beachreview.create!(beachslot_id: beach7.id, user_id: user2.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview24 = Beachreview.create!(beachslot_id: beach8.id, user_id: user2.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview25 = Beachreview.create!(beachslot_id: beach9.id, user_id: user2.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview26 = Beachreview.create!(beachslot_id: beach10.id, user_id: user2.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview27 = Beachreview.create!(beachslot_id: beach11.id, user_id: user2.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview28 = Beachreview.create!(beachslot_id: beach12.id, user_id: user2.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview29 = Beachreview.create!(beachslot_id: beach13.id, user_id: user2.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview30 = Beachreview.create!(beachslot_id: beach14.id, user_id: user2.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview31 = Beachreview.create!(beachslot_id: beach15.id, user_id: user2.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview32 = Beachreview.create!(beachslot_id: beach16.id, user_id: user2.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview33 = Beachreview.create!(beachslot_id: beach1.id, user_id: user3.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview34 = Beachreview.create!(beachslot_id: beach2.id, user_id: user3.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview35 = Beachreview.create!(beachslot_id: beach3.id, user_id: user3.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview36 = Beachreview.create!(beachslot_id: beach4.id, user_id: user3.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview37 = Beachreview.create!(beachslot_id: beach5.id, user_id: user3.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
+beachreview38 = Beachreview.create!(beachslot_id: beach6.id, user_id: user3.id, airpollution: 1, noisepollution:1 , picture: "https://tse2.mm.bing.net/th?id=OIP.rLAuPWAJpU4mWnShXUrG8wHaFC&pid=Api",foottraffick: 1, lightpollution: 1, waterpollution: 1 , plasticpollution:1 , comment: "This beach is fairly clean but we can still do better.", upvote: 1)
 
 # t.integer :beachslot_id
 # t.integer :user_id
